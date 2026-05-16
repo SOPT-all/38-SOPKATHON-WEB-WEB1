@@ -10,7 +10,9 @@ export const getArchives = () =>
   http.get<GetArchivesResponse>(ENDPOINTS.ARCHIVES.GET_ALL);
 
 export const getSavedMessage = (savedMessageId: number) =>
-  http.post<GetSavedMessageResponse>(ENDPOINTS.ARCHIVES.GET(savedMessageId));
+  http.post<GetSavedMessageResponse>(
+    ENDPOINTS.ARCHIVES.GET_ONE(savedMessageId),
+  );
 
 export const deleteSavedMessage = (
   savedMessageId: number,
