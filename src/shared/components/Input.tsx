@@ -6,6 +6,7 @@ interface InputProps {
   sender: string;
   receiver: string;
   centerIcon?: ReactNode;
+  maxLength?: number;
   onSenderChange: ChangeEventHandler<HTMLInputElement>;
   onReceiverChange: ChangeEventHandler<HTMLInputElement>;
 }
@@ -14,6 +15,7 @@ export const Input = ({
   sender,
   receiver,
   centerIcon,
+  maxLength,
   onSenderChange,
   onReceiverChange,
 }: InputProps) => {
