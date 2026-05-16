@@ -6,6 +6,7 @@ import Header from '../home/components/Header';
 import { Chip } from './components/chip';
 import { getArchives } from './apis/archive';
 import type { ArchiveItem } from '../../shared/types/types';
+import { convertHangulToMorse } from '../../shared/utils/morse';
 
 const ArchivePage = () => {
   const [sender, setSender] = useState('');
@@ -28,6 +29,24 @@ const ArchivePage = () => {
         )
       : archives;
 
+  const COLORS = [
+    'text-primary-orange',
+    'text-primary-red',
+    'text-primary-blue',
+  ];
+
+  const [archiveColors, setArchiveColors] = useState<string[]>([]);
+
+  useEffect(() => {
+    getArchives().then((res) => {
+      const data = res ?? [];
+      setArchives(data);
+      setArchiveColors(
+        data.map(() => COLORS[Math.floor(Math.random() * COLORS.length)]),
+      );
+    });
+  }, []);
+
   return (
     <div>
       <Header title="아카이빙" />
@@ -49,13 +68,14 @@ const ArchivePage = () => {
           ))}
         </div>
         <div className="grid grid-cols-2 gap-3">
-          {filteredArchives.map((item) => (
+          {filteredArchives.map((item, index) => (
             <MosCard
               key={item.savedMessageId}
-              content={item.content}
+              content={convertHangulToMorse(item.content)}
               sender={item.senderInitial}
               receiver={item.receiverInitial}
               date={item.createdAt}
+              contentClassName={`font-black tracking-widest ${archiveColors[index]}`}
             />
           ))}
         </div>
