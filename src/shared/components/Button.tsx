@@ -13,7 +13,7 @@ export const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      className={`flex cursor-pointer items-center justify-center ${className}`}
+      className={`bg-text-primary flex h-12.5 w-full cursor-pointer items-center justify-center rounded-[5px] text-[15px] font-semibold text-white ${className}`}
       onClick={onClick}
       type={type}
     >
