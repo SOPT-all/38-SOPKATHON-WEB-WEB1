@@ -1,12 +1,9 @@
-import Header from "./pages/home/components/header";
+import { RouterProvider } from 'react-router-dom';
+
+import { router } from './routes/router';
 
 function App() {
-  return (
-    <>
-      <h1>아아 마이크 테스트</h1>
-      <Header title={'테스트 헤더'} />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
