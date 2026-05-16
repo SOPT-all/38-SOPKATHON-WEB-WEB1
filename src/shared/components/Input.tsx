@@ -7,6 +7,7 @@ interface InputProps {
   receiver: string;
   centerIcon?: ReactNode;
   reverseIcon?: boolean;
+  maxLength?: number;
   onSenderChange: ChangeEventHandler<HTMLInputElement>;
   onReceiverChange: ChangeEventHandler<HTMLInputElement>;
 }
@@ -16,6 +17,7 @@ export const Input = ({
   receiver,
   centerIcon,
   reverseIcon = false,
+  maxLength,
   onSenderChange,
   onReceiverChange,
 }: InputProps) => {
@@ -30,6 +32,7 @@ export const Input = ({
           value={receiver}
           onChange={onReceiverChange}
           placeholder="수신자"
+          maxLength={maxLength}
           className="w-[3.7rem] text-center text-[14px]"
         />
       </label>
@@ -40,6 +43,7 @@ export const Input = ({
           value={sender}
           onChange={onSenderChange}
           placeholder="발신자"
+          maxLength={maxLength}
           className="w-[3.7rem] text-center text-[14px]"
         />
       </label>
