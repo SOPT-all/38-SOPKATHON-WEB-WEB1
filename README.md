@@ -1,6 +1,7 @@
 <div align="center">
 
 <h2> 모시모시 </h2>
+<img width="674" height="316" alt="image" src="https://github.com/user-attachments/assets/e48b8d52-e176-4401-bd08-fa75e93637c8" />
 
 <p>말로 전하기 어려운 마음을 모스부호로 전달하는 웹 서비스</p>
 
@@ -164,4 +165,4 @@
 <img src="https://github.com/user-attachments/assets/cfa36061-ac14-4b35-b98b-ede7376bf527" alt="웨비 팀원들 사진 (before)"/>
  
 <h3>After</h3>
-<img src="" alt="웨비 팀원들 사진 (after)"/>
+<img src="https://github.com/user-attachments/assets/ce0680bf-743c-4922-815e-cc9709155a70" alt="웨비 팀원들 사진 (after)"/>
