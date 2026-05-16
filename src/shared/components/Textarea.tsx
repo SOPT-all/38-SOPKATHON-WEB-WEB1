@@ -9,7 +9,7 @@ function Textarea({ value, onChange, maxLength = 50 }: TextareaProps) {
     <div className="border-background-gray relative h-[231px] w-[335px] rounded-[5px] border bg-white">
       <textarea
         value={value}
-        onChange={(event) => onChange(event.target.value)}
+        onChange={(event) => onChange(event.target.value.slice(0, maxLength))}
         maxLength={maxLength}
         className="h-full w-full resize-none bg-transparent px-[28px] py-[28px] pb-[64px] text-[2rem] outline-none"
       />
